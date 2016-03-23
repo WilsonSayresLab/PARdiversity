@@ -1,0 +1,7 @@
+100kb overlapping interval range
+
+PAR1		windows 0-261
+PAR2		windows 15495-15518
+XTR		windows	8820-9320
+nonPAR		windows 262-15494
+nonPAR noXTR	windows 262-8819 & 9321-15494

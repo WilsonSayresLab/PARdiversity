@@ -1,0 +1,42 @@
+These programs will make one mask file per population from mask files from each individual within it. 
+
+my $usage = "get_ref_sites_inall_26_females.pl [list_of_individuals]\n";
+die $usage unless @ARGV == 1; 
+
+[list_of_individuals] = CGS_Diversity+Ped_all54_indvs_$population_females
+
+————————————————————————————————————————————
+This set of programs is used to filter the mask files for all three populations.
+
+The data for all 26 females will be filtered:
+
+	The first program is used to filter the CGS data for all 26 females with respect 	to microsattelites, repeated elements, genes ...etc. It is 				01_filter.masks.All26.pl
+	
+	#my usage = "filter.masks.All26"
+
+	my $population = "all26_females"
+
+	Input = mask."."$population".".chr.23.txt
+
+	Output = filtered.mask."."$population".".chr.23.txt
+
+	It uses an interval from Galaxy to filter out the coding regions of the data. This 	interval is 02_galaxy_chrX_data/filtered_chrX_interval.txt 
+
+
+The same steps will be followed for the 5 European females using the same input, output, and filter:
+
+	The program used to filter the CGS data of the 5 Europeans with respect to 		microsattelites, repeated elements, genes ...etc is 02_filter.masks.			5Eur.females.pl.
+
+	#my usage = “filter.masks.5Eur.females”
+
+	my $population = "5Eur_females"
+
+The same steps will be followed for the 9 African females using the same input, output, and filter:
+
+	The program used to filter the CGS data of the 9 Africans with respect to 		microsattelites, repeated elements, genes ...etc is 					03_filter.masks.9Afr.females.pl.
+
+	#my usage = "filter.masks.9Afr.females"
+
+	my $population = "9Afr_females"
+	
+	
